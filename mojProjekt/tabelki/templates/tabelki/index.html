@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Bootstrap and datatables</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <h1>Tabela z danymi pobranymi z bazy</h1>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Nazwa</th>
+                <th>Kraj pochodzenia</th>
+                <th>Cena</th>
+            </thead>
+            <tbody>
+            {% for products in product_list %}
+                <tr>
+                    <td>{{ products.id }}</td>
+                    <td>{{ products.name }}</td>
+                    <td>{{ products.country }}</td>
+                    <td>{{ products.price }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
